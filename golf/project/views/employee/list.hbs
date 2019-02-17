@@ -1,0 +1,23 @@
+<h3><a class="btn btn-secondary" href="/employee"><i class="fa fa-plus"></i> Crear Nuevo</a> Menu</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripcion</th>
+            <th>Observaciones</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Titulo}}</td>
+            <td>{{this.Descripcion}}</td>
+            <td>{{this.Observaciones}}</td>
+            <td>
+                <a href="/employee/delete/{{this._id}}" onclick="return confirm('Estas seguro de eliminar esta comida?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
